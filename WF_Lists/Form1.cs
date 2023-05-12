@@ -144,7 +144,8 @@ namespace WF_Lists
                     foreach (Human user in list)
                     {
                         writer.WriteLine($"{user.Name},{user.Surname},{user.Email},{user.Phone}");
-                        listBox1.Items.Add(user.ToString());
+                        Human human = new Human(user.Name, user.Surname, user.Email, user.Phone);
+                        listBox1.Items.Add(human);
                     }
                 }
                 MessageBox.Show("Дані завантажені з файлу");
